@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0d0d0d;
+    color: white;
+}
+
+/* TOPO */
+.topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #111;
+}
+
+.logo-area img {
+    height: 200px;
+}
+
+.frase-topo {
+    color: white;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.topo nav a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+}
+
+.topo nav a:hover {
+    color: #e63946;
+}
+
+/* BANNER */
+.banner {
+    position: relative;
+    height: 90vh;
+    background: url("imagens/fundo.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.banner h2 {
+    font-size: 40px;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 18px 40px;
+    background-color: #e63946;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #c1121f;
+    transform: scale(1.05);
+}
+
+/* SERVIÇOS */
+#servicos {
+    padding: 50px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 12px;
+    width: 220px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background-color: #222;
+}
+
+/* SOBRE E CONTATO */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+.logo-area img {
+    height: 200px;
+}
+h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+.banner-lateral {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    opacity: 0.4;
+    object-fit: cover;
+}
+.conteudo-banner {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+.centro-topo {
+    text-align: center;
+    color: white;
+}
+
+.centro-topo h2 {
+    margin: 0;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.centro-topo p {
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
+}
