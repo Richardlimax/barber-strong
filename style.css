@@ -146,18 +146,57 @@ h2 {
 }
 .whatsapp {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 25px;
+    right: 25px;
     background-color: #25D366;
-    color: white;
-    font-size: 24px;
-    padding: 15px;
+    padding: 12px;
     border-radius: 50%;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     transition: 0.3s;
+}
+
+.whatsapp img {
+    width: 40px;
+    height: 40px;
 }
 
 .whatsapp:hover {
     transform: scale(1.1);
+}
+.instagram {
+    position: fixed;
+    bottom: 90px; /* fica acima do WhatsApp */
+    right: 25px;
+    background: #E1306C;
+    padding: 12px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.instagram img {
+    width: 40px;
+    height: 40px;
+}
+
+.instagram:hover {
+    transform: scale(1.1);
+}
+#unidades {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #111;
+    color: white;
+}
+
+.unidade {
+    margin-bottom: 50px;
+}
+
+.unidade iframe {
+    width: 90%;
+    max-width: 700px;
+    height: 350px;
+    border: 0;
+    border-radius: 10px;
 }
