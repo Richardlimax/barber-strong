@@ -7,6 +7,7 @@
     const year = document.getElementById("year");
     const questionForm = document.getElementById("whatsapp-question-form");
     const questionInput = document.getElementById("whatsapp-question");
+    const questionFeedback = document.getElementById("question-feedback");
 
     if (year) {
         year.textContent = new Date().getFullYear();
@@ -54,13 +55,24 @@
 
             const question = questionInput.value.trim();
             if (!question) {
+                questionForm.classList.add("is-invalid");
+                if (questionFeedback) {
+                    questionFeedback.textContent = "Escreva sua pergunta para continuar.";
+                }
                 questionInput.focus();
                 return;
             }
 
+            questionForm.classList.remove("is-invalid");
             const message = `Olá! ${question}`;
             const whatsappUrl = `https://wa.me/5511981815390?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, "_blank", "noopener");
+        });
+
+        questionInput.addEventListener("input", function () {
+            if (questionInput.value.trim()) {
+                questionForm.classList.remove("is-invalid");
+            }
         });
     }
 
