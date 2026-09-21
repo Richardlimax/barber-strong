@@ -66,7 +66,7 @@
             questionForm.classList.remove("is-invalid");
             const message = `Olá! ${question}`;
             const whatsappUrl = `https://wa.me/5511981815390?text=${encodeURIComponent(message)}`;
-            window.open(whatsappUrl, "_blank", "noopener");
+            window.location.assign(whatsappUrl);
         });
 
         questionInput.addEventListener("input", function () {
