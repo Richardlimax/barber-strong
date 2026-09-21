@@ -5,6 +5,8 @@
     const revealItems = document.querySelectorAll(".reveal");
     const navLinks = document.querySelectorAll(".site-nav a");
     const year = document.getElementById("year");
+    const questionForm = document.getElementById("whatsapp-question-form");
+    const questionInput = document.getElementById("whatsapp-question");
 
     if (year) {
         year.textContent = new Date().getFullYear();
@@ -45,6 +47,22 @@
             }
         });
     });
+
+    if (questionForm && questionInput) {
+        questionForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const question = questionInput.value.trim();
+            if (!question) {
+                questionInput.focus();
+                return;
+            }
+
+            const message = `Olá! ${question}`;
+            const whatsappUrl = `https://wa.me/5511981815390?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, "_blank", "noopener");
+        });
+    }
 
     if ("IntersectionObserver" in window) {
         const observer = new IntersectionObserver(function (entries) {
